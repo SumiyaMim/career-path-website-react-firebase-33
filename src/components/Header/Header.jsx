@@ -1,14 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Header = () => {
 
   const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout().then((result) => console.log(result));
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout()
+    navigate('/login')
   };
 
     const links = <>
