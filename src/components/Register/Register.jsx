@@ -17,7 +17,10 @@ const Register = () => {
 
     // create user with google
     const handleGoogleRegister = () => {
-        googleSignIn().then((result) => console.log(result.user));
+        googleSignIn().then((result) => 
+          // console.log(result.user)
+          navigate('/')
+        );
     };
 
     // create user

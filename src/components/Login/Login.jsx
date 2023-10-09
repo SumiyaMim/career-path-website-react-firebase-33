@@ -18,7 +18,10 @@ const Login = () => {
 
     // login with google
     const handleGoogleLogin = () => {
-        googleSignIn().then((result) => console.log(result.user));
+        googleSignIn().then((result) => 
+          // console.log(result.user)
+          navigate('/')
+        );
     };
 
     // login user
